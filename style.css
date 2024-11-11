@@ -63,18 +63,22 @@ body{
     position: absolute;
     top: 20%;
     left: 30%;
-    background-image: url('letter.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), url('letter.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 60vh;
-    width: 80vw;
-    color: rgb(156, 0, 0);
-    font-size: 4vh;
+    height: 54.3vh;
+    width: 78vh;
+    color: rgb(255, 184, 184);
+    font-size: 3.5vh;
     display: flex;
     opacity: 1;
     transition-duration: 1s;
     z-index: 2;
-    padding: 1vh;
+    padding: 3vh;
+    border: .4vh solid rgb(255, 63, 63);
+    border-right: .2vh solid rgb(255, 63, 63);
+    border-left: .2vh solid rgb(255, 63, 63);
+    border-radius: 1vh 20vh 1vh 20vh;
 }
 
 .card-none{
@@ -84,4 +88,34 @@ body{
     top: 0;
     left: 0;
     opacity: 0
+}
+
+i{
+    position: absolute;
+    height: 15px;
+    background: linear-gradient(transparent, #fff);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation: rain 5s linear infinite;
+}
+
+i:nth-child(3n+1){
+    background: linear-gradient(to bottom right, transparent, transparent, rgb(238, 107, 107), rgb(235, 77, 77));
+}
+
+i:nth-child(3n+2){
+    background: linear-gradient(to bottom right, transparent, transparent, rgb(235, 77, 77), rgb(231, 60, 60));
+}
+
+i:nth-child(3n+3){
+    background: linear-gradient(to bottom right, transparent, transparent, rgb(231, 60, 60), rgb(238, 107, 107));
+}
+
+@keyframes rain{
+    0%{
+        transform: translateX(-50vw) translateY(-50vh) rotate(0);
+    }
+    100%{
+        transform: translateX(calc(100vw)) translatey(calc(100vh)) rotate(3600deg);
+    }
 }

@@ -1,6 +1,7 @@
-var body = document.getElementsByClassName('btn-container')
+var body2 = document.getElementsByClassName('btn-container')
 var letter = document.getElementById('letter')
-body[0].addEventListener("click", myFunction())
+let button2 = document.getElementById('heart');
+button2.addEventListener("click", myFunction())
 
 function add(){
     letter.classList.add("card-none")
